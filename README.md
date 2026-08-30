@@ -90,7 +90,7 @@ A plataforma também manterá o registro das doações e retiradas realizadas, p
 
 A modelagem inicial do sistema está representada no diagrama UML abaixo.
 
-![Diagrama de navegação do Salva+](diagrama.jpg)
+![Diagrama de navegação do Salva+](diagrama.pdf)
 
 ## Principais Classes
 
