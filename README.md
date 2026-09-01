@@ -120,7 +120,41 @@ Com o desenvolvimento do **Salva+**, esperamos:
 * Gerar informações sobre a quantidade de alimentos aproveitados e o impacto das doações.
 
 
+# 📌 Arquitetura do Sistema Salva+ (Modelo C4)
 
+Este documento apresenta a documentação arquitetural do projeto **Salva+**, utilizando o **Modelo C4** para detalhar a visão geral do sistema e seus componentes internos.
+
+---
+
+## 🖼️ Nível 1: Diagrama de Contexto (Context)
+
+O diagrama de contexto apresenta o **Sistema Salva+** em um alto nível de abstração, destacando seus usuários (atores) e as integrações com sistemas externos.
+
+![Diagrama de Contexto](c4-nivel1-contexto.png)
+
+### **Componentes:**
+* **Usuários (Doador / Beneficiário / Voluntário):** Pessoas e instituições que utilizam a plataforma para cadastrar, solicitar ou realizar a entrega de doações de alimentos.
+* **Sistema Salva+:** A plataforma central responsável por intermediar todo o processo de redução do desperdício de alimentos.
+* **API de Inteligência Artificial:** Serviço externo que analisa os dados das doações para calcular a prioridade de recolhimento e entrega.
+
+---
+
+## 🖼️ Nível 2: Diagrama de Contêineres (Containers)
+
+O diagrama de contêineres faz um "zoom" no **Sistema Salva+**, detalhando as tecnologias escolhidas e como as aplicações se comunicam internamente.
+
+![Diagrama de Contêineres](c4-nivel2-conteineres.png)
+
+### **Contêineres Internos:**
+* **Aplicativo Móvel (`React Native`):** Interface de usuário onde doadores e beneficiários realizam o cadastro, visualizam ofertas e acompanham solicitações.
+* **Backend da API (`Node.js / Express`):** Servidor principal que processa as regras de negócio, gerencia as autenticações e orquestra os dados da aplicação.
+* **Banco de Dados (`PostgreSQL`):** Banco de dados relacional encarregado de armazenar o histórico de doações, perfis de usuários e logs da plataforma.
+
+### **Comunicação entre Componentes:**
+1. O **Usuário** interage com o **Aplicativo Móvel**.
+2. O **Aplicativo Móvel** envia requisições `HTTP/JSON` para o **Backend da API**.
+3. O **Backend da API** executa leituras e escritas via `SQL` no **Banco de Dados PostgreSQL**.
+4. O **Backend da API** consulta a **API de IA** externa via `HTTPS` para obter cálculos de priorização de entregas.
 
 
 
