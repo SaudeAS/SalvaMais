@@ -124,7 +124,7 @@ Este documento apresenta a documentação arquitetural do projeto **Salva+**, ut
 
 O diagrama de contexto apresenta o **Sistema Salva+** em um alto nível de abstração, destacando seus usuários (atores) e as integrações com sistemas externos.
 
-![Diagrama de Contexto](c4-nivel1-contexto.png)
+![Diagrama de Contexto](docs/c4-nivel1-contexto.png)
 
 ### **Componentes:**
 * **Usuários (Doador / Beneficiário / Voluntário):** Pessoas e instituições que utilizam a plataforma para cadastrar, solicitar ou realizar a entrega de doações de alimentos.
@@ -137,7 +137,7 @@ O diagrama de contexto apresenta o **Sistema Salva+** em um alto nível de abstr
 
 O diagrama de contêineres faz um "zoom" no **Sistema Salva+**, detalhando as tecnologias escolhidas e como as aplicações se comunicam internamente.
 
-![Diagrama de Contêineres](c4-nivel2-conteineres.png)
+![Diagrama de Contêineres](docs/c4-nivel2-conteineres.png)
 
 ### **Contêineres Internos:**
 * **Aplicativo Móvel (`React Native`):** Interface de usuário onde doadores e beneficiários realizam o cadastro, visualizam ofertas e acompanham solicitações.
