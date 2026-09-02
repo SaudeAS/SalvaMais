@@ -113,6 +113,20 @@ Com o desenvolvimento do **Salva+**, esperamos:
 * Organizar o processo de doação e retirada;
 * Gerar informações sobre a quantidade de alimentos aproveitados e o impacto das doações.
 
+## 📐 Modelagem e Arquitetura
+
+### 1. Diagrama de Classes (POO)
+Abaixo está a representação do modelo de domínio da aplicação **Salva+**, demonstrando as entidades, atributos, métodos e relacionamentos:
+
+![Diagrama de Classes](docs/diagrama-de-classes.png)
+
+#### Explicação das Entidades e Relacionamentos:
+* **Usuario:** Representa os doadores e beneficiários do sistema. Um usuário pode registrar de zero a várias doações (`1` para `0..*`).
+* **Doacao:** Contém as informações da oferta de mantimentos. Cada doação pertence a exatamente um usuário e possui um lote com pelo menos um item (`1` para `1..*`).
+* **ItemDoacao:** Detalha cada produto doado (quantidade e data de validade). Cada item está associado obrigatoriamente a uma única categoria de alimento (`*` para `1`).
+* **CategoriaAlimento:** Classifica os alimentos (ex: perecíveis, não perecíveis) e indica a necessidade de refrigeração.
+* **PriorizacaoIA:** Mapeia a análise gerada pela IA, atribuindo nota de urgência e recomendações de resgate para a doação (`1` para `0..1`).
+
 
 # 📌 Arquitetura do Sistema Salva+ (Modelo C4)
 
