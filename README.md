@@ -155,7 +155,7 @@ O diagrama de contêineres faz um "zoom" no **Sistema Salva+**, detalhando as te
 
 ### **Contêineres Internos:**
 * **Aplicativo Móvel (`React Native`):** Interface de usuário onde doadores e beneficiários realizam o cadastro, visualizam ofertas e acompanham solicitações.
-* **Backend da API ( Java / Spring Boot ):** Servidor principal que processa as regras de negócio, gerencia as autenticações e orquestra os dados da aplicação.
+* **Backend da API (`Java / Spring Boot`):** Servidor principal que processa as regras de negócio, gerencia as autenticações e orquestra os dados da aplicação.
 * **Banco de Dados (`PostgreSQL`):** Banco de dados relacional encarregado de armazenar o histórico de doações, perfis de usuários e logs da plataforma.
 
 ### **Comunicação entre Componentes:**
